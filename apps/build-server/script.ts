@@ -42,7 +42,7 @@ async function init () {
             const command=new PutObjectCommand({
                 Bucket: 'hostify',
                 Key: `__outputs/${PROJECT_ID}/${file}`,
-                BODY: fs.createReadStream(filePath),
+                Body: fs.createReadStream(filePath),
                 ContentType: mime.lookup(filePath)
             })
 
